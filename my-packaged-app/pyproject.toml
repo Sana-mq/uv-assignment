@@ -1,0 +1,22 @@
+[project]
+name = "my-packaged-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+my-packaged-app = "my_packaged_app:main"           # Runs main() from __init__.py
+my-packaged-app-main = "my_packaged_app.main:main" # Runs main() from main.py
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "mypy>=1.17.1",
+    "ruff>=0.12.10",
+]
